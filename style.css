@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("heart-bg.jpg");
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Envelope Screen */
+#envelope-container {
+    text-align: center;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#envelope {
+    width: 200px;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+}
+
+#letter-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-window {
+    width: 90vw;
+    max-width: 800px;
+    aspect-ratio: 3/2;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("window.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    gap: 1px;
+    padding-top: 180px;
+
+    transform: scale(1.2);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+p {
+    font-size: 40px;
+}
+
+/* Cat */
+
+.cat {
+    width: 250px;
+    margin: 10px 0;
+    transition: width 0.4s ease;
+}
+
+.letter-window.final .cat {
+    width: 180px;
+}
+
+/* buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.no-wrapper {
+    position: relative;
+}
+
+.btn {
+    width: 120px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.yes-btn,
+.no-btn {
+    width: 120px;
+    height: auto;
+    display: inline-block;
+}
+
+.yes-btn {
+    position: relative;
+    z-index: 2;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+.no-btn {
+    z-index: 1;
+    position: relative;
+    transition: transform 0.15s ease;
+    cursor: default;
+}
+
+.final-text {
+    font-size: 22px;
+    line-height: 1.4;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 240, 240, 0.5);
+    border-radius: 12px;
+}
+
+/* Slideshow */
+/* .slideshow-container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.slideshow-container {
+  width: 420px;          /* was smaller — increase this */
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+/* .slide-wrapper {
+    width: 80%;
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #ff4d6d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.slide-wrapper {
+  width: 100%;
+  height: 300px;         /* increase height */
+  border: 6px solid #e06b6b;   /* keeps pixel-frame look */
+  background: #f7cfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-caption {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #d90429;
+}
+
+/* Questions */
+.questions-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.question-text {
+    font-size: 24px;
+    color: #590d22;
+    margin-bottom: 20px;
+    min-height: 60px;
+    /* Prevent jumping */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Remove default button styling */
+.img-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* NEXT button image styling */
+.next-btn {
+  width: 120px;           /* adjust if needed */
+  image-rendering: pixelated;
+  transition: transform 0.15s ease;
+}
+
+/* Hover effect (pixel feel) */
+.img-btn:hover .next-btn {
+  transform: translateY(-2px);
+}
+
+/* Click effect */
+.img-btn:active .next-btn {
+  transform: translateY(2px);
+}

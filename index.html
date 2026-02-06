@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>♡ Letter for You ♡</p>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Will you be my Valentine?</h1>
+
+        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No" />
+          </div>
+        </div>
+
+        <p id="final-text" class="final-text" style="display: none">
+          <strong>Valentine Date:</strong> Place? Please text me! because you
+          know women are always right!!!!
+        </p>
+
+        <!-- Slideshow Container -->
+        <div
+          id="slideshow-container"
+          class="slideshow-container"
+          style="display: none"
+        >
+          <div class="slide-wrapper">
+            <img
+              id="slide-img"
+              src=""
+              alt="Slideshow Image"
+              class="slide-image"
+            />
+          </div>
+          <p class="slide-caption">You and Me ❤️</p>
+        </div>
+
+        <!-- Questions Container -->
+        <div
+          id="questions-container"
+          class="questions-container"
+          style="display: none"
+        >
+          <p id="question-text" class="question-text">
+            Ready for some questions?
+          </p>
+          <button id="next-question-btn" class="img-btn">
+            <img src="next.png" class="btn next-btn" alt="Next" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
